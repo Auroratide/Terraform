@@ -11,5 +11,9 @@ namespace Auroratide.Terraform {
         public PlanetQuadrant(List<IElement> elements) {
             this.elements = elements;
         }
+
+        public void Add(IElement element) {
+            elements.Add(element);
+        }
     }
 }

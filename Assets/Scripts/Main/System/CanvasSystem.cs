@@ -25,29 +25,40 @@ namespace Auroratide.Terraform {
 
 
         public void FadePlanetUI() {
-            config.planetUI.alpha = config.fadeAlpha;
+            Fade(config.planetUI);
         }
 
         public void UnfadePlanetUI() {
-            config.planetUI.alpha = config.unfadeAlpha;
+            Unfade(config.planetUI);
         }
 
 
         public void FadePlanet() {
-            config.planet.alpha = config.fadeAlpha;
+            Fade(config.planet);
         }
 
         public void UnfadePlanet() {
-            config.planet.alpha = config.unfadeAlpha;
+            Unfade(config.planet);
         }
 
 
         public void FadeQuadrantsUI() {
-            config.quadrantsUI.alpha = config.fadeAlpha;
+            Fade(config.quadrantsUI);
         }
 
         public void UnfadeQuadrantsUI() { 
-            config.quadrantsUI.alpha = config.unfadeAlpha;
+            Unfade(config.quadrantsUI);
+        }
+
+
+        private void Fade(CanvasGroup group) {
+            group.alpha = config.fadeAlpha;
+            group.interactable = false;
+        }
+
+        private void Unfade(CanvasGroup group) {
+            group.alpha = config.unfadeAlpha;
+            group.interactable = true;
         }
 
 

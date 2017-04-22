@@ -9,6 +9,7 @@ namespace Auroratide.Terraform {
         public void AddElement(string element) {
             Debug.Log("Adding " + element);
             canvas.HideElementsUI();
+            canvas.UnfadePlanet();
         }
 
     }

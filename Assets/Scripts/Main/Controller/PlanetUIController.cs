@@ -8,7 +8,9 @@ namespace Auroratide.Terraform {
 
         public void AddElements() {
             Debug.Log("Add Elements Button Clicked");
-            canvas.RevealElementsUI();
+            canvas.ShowElementsUI();
+            canvas.FadePlanetUI();
+            canvas.FadePlanet();
         }
 
     }

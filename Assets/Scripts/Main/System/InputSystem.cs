@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Auroratide.Terraform.System {
+namespace Auroratide.Terraform {
     public class InputSystem : MonoBehaviour, IInputSystem {
 
     	void Start () {

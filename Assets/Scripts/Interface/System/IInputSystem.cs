@@ -1,4 +1,4 @@
-﻿namespace Auroratide.Terraform.System {
+﻿namespace Auroratide.Terraform {
     public interface IInputSystem {
         
     }

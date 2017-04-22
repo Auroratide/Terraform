@@ -15,6 +15,27 @@ namespace Auroratide.Terraform {
             canvas.UnfadePlanetUI();
         }
 
+        public void AddElementToTopRight() {
+            Debug.Log("Adding " + activeElement.ToString() + " to Top Right");
+            config.planet.AddElementToTopRight(activeElement);
+            canvas.FadeQuadrantsUI();
+            canvas.UnfadePlanetUI();
+        }
+
+        public void AddElementToBottomLeft() {
+            Debug.Log("Adding " + activeElement.ToString() + " to Bottom Left");
+            config.planet.AddElementToBottomLeft(activeElement);
+            canvas.FadeQuadrantsUI();
+            canvas.UnfadePlanetUI();
+        }
+
+        public void AddElementToBottomRight() {
+            Debug.Log("Adding " + activeElement.ToString() + " to Bottom Right");
+            config.planet.AddElementToBottomRight(activeElement);
+            canvas.FadeQuadrantsUI();
+            canvas.UnfadePlanetUI();
+        }
+
         public void SetElement(IElement element) {
             this.activeElement = element;
         }

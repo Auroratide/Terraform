@@ -21,6 +21,7 @@ namespace Auroratide.Terraform {
             config.planet.AddElementToTopRight(activeElement);
             canvas.FadeQuadrantsUI();
             canvas.UnfadePlanetUI();
+            config.planet.RenderTerrain();
         }
 
         public void AddElementToBottomLeft() {
@@ -28,6 +29,7 @@ namespace Auroratide.Terraform {
             config.planet.AddElementToBottomLeft(activeElement);
             canvas.FadeQuadrantsUI();
             canvas.UnfadePlanetUI();
+            config.planet.RenderTerrain();
         }
 
         public void AddElementToBottomRight() {
@@ -35,6 +37,7 @@ namespace Auroratide.Terraform {
             config.planet.AddElementToBottomRight(activeElement);
             canvas.FadeQuadrantsUI();
             canvas.UnfadePlanetUI();
+            config.planet.RenderTerrain();
         }
 
         public void SetElement(IElement element) {

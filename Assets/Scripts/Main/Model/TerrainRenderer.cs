@@ -18,7 +18,7 @@ namespace Auroratide.Terraform {
         public List<IPlanetProperty> BuildOctantProperties(int octant) {
             List<IPlanetProperty> properties = new List<IPlanetProperty>();
             if(terrain.Temperature(octant) > 10) {
-                properties.Add(new HasMagma());
+                properties.Add(new HasMagma(octant));
             }
 
             return properties;

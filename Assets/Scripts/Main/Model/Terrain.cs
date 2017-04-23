@@ -2,15 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Terrain : MonoBehaviour {
+namespace Auroratide.Terraform {
+    public class Terrain {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        private Gradient<float> temperature;
+        private Gradient<float> hydration;
+        private Gradient<float> atmosphere;
+
+        public Terrain() {
+            this.temperature = new Gradient<float>();
+        }
+
+                                            //    [0, 7]
+        public void Apply(IElement element, int aroundAngle) {
+            temperature = Add(temperature, element.Temperature().RotateClockwise(aroundAngle));
+        }
+
+        public string ToString() {
+            return temperature.ToString();
+        }
+
+        public static Gradient<float> Add(Gradient<float> lhs, Gradient<float> rhs) {
+            Gradient<float> sum = new Gradient<float>();
+            for(int i = 0; i < Gradient<float>.SIZE; ++i) {
+                sum.Set(i, lhs.Get(i) + rhs.Get(i));
+            }
+
+            return sum;
+        }
+
+    }
 }

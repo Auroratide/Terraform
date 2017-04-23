@@ -34,6 +34,21 @@ namespace Auroratide.Terraform {
             this.bottomLeft = bottomLeft;
             this.bottomRight = bottomRight;
         }
+
+        public List<AppliedElement> ElementApplications() {
+            List<AppliedElement> elements = new List<AppliedElement>();
+
+            foreach(IElement elem in TopLeft.Elements())
+                elements.Add(new AppliedElement(elem, 1));
+            foreach(IElement elem in TopRight.Elements())
+                elements.Add(new AppliedElement(elem, 3));
+            foreach(IElement elem in BottomRight.Elements())
+                elements.Add(new AppliedElement(elem, 5));
+            foreach(IElement elem in BottomLeft.Elements())
+                elements.Add(new AppliedElement(elem, 7));
+
+            return elements;
+        }
     }
 
 }

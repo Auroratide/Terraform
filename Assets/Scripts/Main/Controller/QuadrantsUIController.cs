@@ -13,6 +13,7 @@ namespace Auroratide.Terraform {
             config.planet.AddElementToTopLeft(activeElement);
             canvas.FadeQuadrantsUI();
             canvas.UnfadePlanetUI();
+            config.planet.RenderTerrain();
         }
 
         public void AddElementToTopRight() {

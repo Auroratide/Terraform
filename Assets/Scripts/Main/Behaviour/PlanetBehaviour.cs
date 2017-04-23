@@ -27,5 +27,10 @@ namespace Auroratide.Terraform {
             planet.BottomRight.Add(element);
         }
 
+        public void RenderTerrain() {
+            Terrain terrain = new TerrainGenerator(planet).Generate();
+            Debug.Log(terrain.ToString());
+        }
+
     }
 }

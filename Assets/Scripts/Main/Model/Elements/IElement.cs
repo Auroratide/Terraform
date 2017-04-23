@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Auroratide.Terraform {
-    public interface IElement {}
+    public interface IElement {
+
+        Gradient<float> Temperature();
+
+    }
 
 }

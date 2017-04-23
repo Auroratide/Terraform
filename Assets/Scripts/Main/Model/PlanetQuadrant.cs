@@ -15,5 +15,9 @@ namespace Auroratide.Terraform {
         public void Add(IElement element) {
             elements.Add(element);
         }
+
+        public List<IElement> Elements() {
+            return elements;
+        }
     }
 }

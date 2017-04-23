@@ -30,6 +30,8 @@ namespace Auroratide.Terraform {
         public void RenderTerrain() {
             Terrain terrain = new TerrainGenerator(planet).Generate();
             Debug.Log(terrain.ToString());
+
+
         }
 
     }

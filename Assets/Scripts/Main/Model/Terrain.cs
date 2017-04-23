@@ -11,11 +11,18 @@ namespace Auroratide.Terraform {
 
         public Terrain() {
             this.temperature = new Gradient<float>();
+            this.hydration = new Gradient<float>();
+            this.atmosphere = new Gradient<float>();
         }
 
                                             //    [0, 7]
         public void Apply(IElement element, int aroundAngle) {
             temperature = Add(temperature, element.Temperature().RotateClockwise(aroundAngle));
+        }
+
+
+        public float Temperature(int octant) {
+            return temperature.Get(octant);
         }
 
         public string ToString() {
